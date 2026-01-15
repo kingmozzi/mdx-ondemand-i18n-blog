@@ -43,6 +43,7 @@
     "@shikijs/transformers": "^2.3.2",
     "@tailwindcss/postcss": "^4.0.9",
     "@tailwindcss/typography": "^0.5.16",
+    "@types/mdx": "^2.0.13",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
