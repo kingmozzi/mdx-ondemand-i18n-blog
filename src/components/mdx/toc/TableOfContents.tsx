@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useEffect } from 'react';
-import * as tocbot from 'tocbot';
+import tocbot from 'tocbot';
 
 interface Props {
   onClick?: (e: Event) => void;
