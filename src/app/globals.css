@@ -1,0 +1,8 @@
+:root {
+  --accent: #22d3ee; /* aqua-ish (cyan-400 느낌) */
+}
+
+/* 다크에서 살짝 더 또렷하게 하고 싶으면 */
+.dark {
+  --accent: #38bdf8; /* sky-400 */
+}

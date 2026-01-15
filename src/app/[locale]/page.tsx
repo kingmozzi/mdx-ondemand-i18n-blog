@@ -7,6 +7,7 @@ import { PageLayout } from '@/components/layouts/PageLayout';
 import { allPages } from 'contentlayer/generated';
 
 import { AboutSection } from '@/components/home/AboutSection';
+import { ContactSection } from '@/components/home/ContactSection';
 
 interface PageProps {
   params: Promise<{ locale: LocaleTypes }>;
@@ -59,7 +60,9 @@ export default async function Home({ params }: PageProps) {
         </section>
         {/* contact */}
         <h2 className="text-4xl font-bold">{t('contact')}</h2>
-        <section className="grid w-full grid-cols-1 gap-4 rounded-xl border-2 p-4"></section>
+        <section className="grid w-full grid-cols-1 gap-4 rounded-xl border-2 p-4">
+          <ContactSection />
+        </section>
       </div>
     </PageLayout>
   );
