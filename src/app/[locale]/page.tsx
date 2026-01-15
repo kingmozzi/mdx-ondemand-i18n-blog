@@ -6,6 +6,8 @@ import { LATEST_POSTS_PER_PAGE } from '@/lib/constants';
 import { PageLayout } from '@/components/layouts/PageLayout';
 import { allPages } from 'contentlayer/generated';
 
+import { AboutSection } from '@/components/home/AboutSection';
+
 interface PageProps {
   params: Promise<{ locale: LocaleTypes }>;
 }
@@ -20,10 +22,14 @@ export default async function Home({ params }: PageProps) {
   return (
     <PageLayout>
       <div className="grid gap-8">
-        <h2 className="text-4xl font-bold">{t('about us')}</h2>
-        <section className="grid w-full grid-cols-1 gap-8 rounded-xl border-2 p-4"></section>
+        {/* about */}
+        {/* <h2 className="text-4xl font-bold">{t('about us')}</h2> */}
+        <section className="grid w-full grid-cols-1 gap-8">
+          <AboutSection locale={locale} />
+        </section>
+        {/* latesPosts */}
         <h2 className="text-4xl font-bold">{t('latestPosts')}</h2>
-        <section className="grid w-full grid-cols-1 gap-8 rounded-xl border-2 p-4">
+        <section className="grid w-full grid-cols-1 gap-8">
           <ul className="grid grid-cols-1 gap-4 lg:grid-cols-2">
             {filteredPosts.slice(0, LATEST_POSTS_PER_PAGE).map((post) => (
               <li key={post.slug}>
@@ -38,8 +44,7 @@ export default async function Home({ params }: PageProps) {
             {t('viewAllPosts')}
           </a>
         </section>
-        <h2 className="text-4xl font-bold">{t('contact')}</h2>
-        <section className="grid w-full grid-cols-1 gap-8 rounded-xl border-2 p-4"></section>
+        {/* pages */}
         <h2 className="text-4xl font-bold">{t('pages')}</h2>
         <section className="border-border grid w-full grid-cols-1 gap-8 rounded-xl border-2 p-4">
           <ul className="grid grid-cols-1 gap-4">
@@ -52,6 +57,9 @@ export default async function Home({ params }: PageProps) {
             ))}
           </ul>
         </section>
+        {/* contact */}
+        <h2 className="text-4xl font-bold">{t('contact')}</h2>
+        <section className="grid w-full grid-cols-1 gap-4 rounded-xl border-2 p-4"></section>
       </div>
     </PageLayout>
   );
