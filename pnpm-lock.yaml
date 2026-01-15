@@ -77,6 +77,9 @@ importers:
       unfurl.js:
         specifier: ^6.4.0
         version: 6.4.0
+      unified:
+        specifier: ^11.0.5
+        version: 11.0.5
     devDependencies:
       '@egoist/tailwindcss-icons':
         specifier: ^1.9.0
