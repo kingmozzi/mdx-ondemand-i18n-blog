@@ -96,6 +96,9 @@ importers:
       '@tailwindcss/typography':
         specifier: ^0.5.16
         version: 0.5.19(tailwindcss@4.1.18)
+      '@types/mdast':
+        specifier: ^4.0.4
+        version: 4.0.4
       '@types/mdx':
         specifier: ^2.0.13
         version: 2.0.13
@@ -108,6 +111,9 @@ importers:
       '@types/react-dom':
         specifier: ^19
         version: 19.2.3(@types/react@19.2.8)
+      '@types/unist':
+        specifier: ^3.0.3
+        version: 3.0.3
       contentlayer2:
         specifier: ^0.5.3
         version: 0.5.8(esbuild@0.27.2)
