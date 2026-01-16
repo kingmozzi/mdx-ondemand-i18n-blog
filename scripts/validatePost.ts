@@ -73,7 +73,9 @@ function validateContent(content: string): string[] {
 }
 
 function validatePost(postPath: string): string[] {
-  const post = fs.readFileSync(postPath, 'utf-8');
+  //const post = fs.readFileSync(postPath, 'utf-8');
+  const post = safeRead(postPath);
+  if (!post) return [];
   const { data: frontmatter } = matter(post);
   return [
     ...validateRequiredKeys(frontmatter as FrontMatter),
@@ -95,6 +97,14 @@ function getStagedMdxFiles(): string[] {
     console.error('❌ Failed to get staged files:', error);
     return [];
   }
+}
+
+function safeRead(filePath: string) {
+  if (!fs.existsSync(filePath)) {
+    console.warn(`[validatePost] skip (missing): ${filePath}`);
+    return null;
+  }
+  return fs.readFileSync(filePath, 'utf8');
 }
 
 function main() {
