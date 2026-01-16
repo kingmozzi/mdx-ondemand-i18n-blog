@@ -3,13 +3,13 @@ type Metadata = {
 };
 
 export const title: Metadata = {
-  ja: 'MDX OnDemand i18n ブログ',
-  en: 'MDX OnDemand i18n Blog',
-  ko: 'MDX 온디맨드 i18n 블로그',
+  ja: 'Kim Jaehee ポートフォリオ',
+  en: 'Jaehee Kim Portfolio',
+  ko: 'Kim Jaehee 포트폴리오',
 };
 
 export const description: Metadata = {
-  ja: 'MDX OnDemand i18n ブログの説明',
-  en: 'Description of MDX OnDemand i18n Blog',
-  ko: 'MDX 온디맨드 i18n 블로그 설명',
+  ja: 'Jaeheeのポートフォリオサイトです。ブログと成果物を公開しています。',
+  en: 'Jaehee Portfolio Site. Blog and Works are published.',
+  ko: '재희의 포트폴리오 사이트. 블로그와 작품을 공개합니다.',
 };
