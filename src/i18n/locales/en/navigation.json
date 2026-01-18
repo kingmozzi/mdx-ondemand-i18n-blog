@@ -2,5 +2,7 @@
   "title": "Header",
   "home": "Home",
   "posts": "Posts",
-  "categories": "Categories"
+  "categories": "Categories",
+  "works": "Works",
+  "theme": "Theme"
 }
