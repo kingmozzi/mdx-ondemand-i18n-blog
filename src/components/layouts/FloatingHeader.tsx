@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Home, Menu, Moon, Sun, X } from 'lucide-react';
-
+import { useTranslation } from '@/i18n/i18nClient';
 import LangSwitch from '@/components/langSwitch/LangSwitch';
 
 type NavItem = { href: string; label: string; icon?: React.ReactNode };
@@ -29,6 +29,8 @@ export function FloatingHeader({
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
 
   const [overlayMounted, setOverlayMounted] = useState(false);
+
+  const { t } = useTranslation(locale, 'navigation');
 
   useEffect(() => setOverlayMounted(true), []);
 
@@ -88,11 +90,11 @@ export function FloatingHeader({
 
   const navItems: NavItem[] = useMemo(
     () => [
-      { href: `/${locale}`, label: '홈', icon: <Home className="h-4 w-4" /> },
-      { href: `/${locale}/posts`, label: '포스트' },
-      { href: `/${locale}/works`, label: '작품' },
+      { href: `/${locale}`, label: mounted ? t('home') : '', icon: <Home className="h-4 w-4" /> },
+      { href: `/${locale}/posts`, label: mounted ? t('posts') : '' },
+      { href: `/${locale}/works`, label: mounted ? t('works') : '' },
     ],
-    [locale]
+    [locale, mounted, t]
   );
 
   return (
@@ -198,7 +200,7 @@ export function FloatingHeader({
                       className="hover:bg-foreground/5 block rounded-lg px-3 py-2 text-sm"
                       onClick={() => setMobileOpen(false)}
                     >
-                      홈
+                      {mounted ? t('home') : ''}
                     </Link>
 
                     <Link
@@ -206,7 +208,7 @@ export function FloatingHeader({
                       className="hover:bg-foreground/5 block rounded-lg px-3 py-2 text-sm"
                       onClick={() => setMobileOpen(false)}
                     >
-                      포스트
+                      {mounted ? t('posts') : ''}
                     </Link>
 
                     <Link
@@ -214,7 +216,7 @@ export function FloatingHeader({
                       className="hover:bg-foreground/5 block rounded-lg px-3 py-2 text-sm"
                       onClick={() => setMobileOpen(false)}
                     >
-                      작품
+                      {mounted ? t('works') : ''}
                     </Link>
 
                     <div className="bg-foreground/10 my-2 h-px" />
@@ -227,7 +229,7 @@ export function FloatingHeader({
                         setMobileOpen(false);
                       }}
                     >
-                      <span>테마 변경</span>
+                      <span>{mounted ? t('theme') : ''}</span>
                       {!mounted ? null : isDark ? (
                         <Sun className="h-4 w-4" />
                       ) : (
