@@ -1,6 +1,6 @@
 # Jaehee Blog
 
-🌐 Live Site: https://your-blog.vercel.app
+🌐 Live Site: https://jaehee-dev.vercel.app
 
 Personal blog & portfolio built with **Next.js App Router**, **MDX**, and **i18n**.
 
