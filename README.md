@@ -1,5 +1,7 @@
 # Jaehee Blog
 
+🌐 Live Site: https://your-blog.vercel.app
+
 Personal blog & portfolio built with **Next.js App Router**, **MDX**, and **i18n**.
 
 This project is a heavily customized fork of  
