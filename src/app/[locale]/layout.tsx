@@ -72,7 +72,7 @@ export default async function RootLayout({
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <HeaderClient locale={locale} />
-          <div className="pt-20">{children}</div>
+          <div className="pt-0">{children}</div>
         </ThemeProvider>
       </body>
     </html>
