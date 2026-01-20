@@ -1,0 +1,23 @@
+{
+  "works": "작품",
+  "tableOfContents": "목차",
+  "backToTop": "맨 위로",
+  "editPage": "이 페이지 수정하기",
+  "backToHome": "홈으로",
+
+  "period": "기간",
+  "postedOn": "게시일",
+  "status": "상태",
+
+  "status_done": "완료",
+  "status_in_progress": "진행중",
+
+  "notTranslated": "이 컨텐츠는 아직",
+  "version": "로 제공되지 않습니다.",
+
+  "notfound": "해당하는 작품이 없습니다.",
+  "searchPlaceholder": "작품 검색",
+  "prevPageText": "이전",
+  "nextPageText": "다음"
+  
+}
