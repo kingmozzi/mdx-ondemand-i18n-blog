@@ -102,9 +102,45 @@ export const Page = defineDocumentType(() => ({
   computedFields,
 }));
 
+export const Work = defineDocumentType(() => ({
+  name: 'Work',
+  filePathPattern: `works/**/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    published: { type: 'boolean', required: true },
+    title: { type: 'string', required: true },
+    description: { type: 'string', required: true },
+
+    // 정렬용
+    date: { type: 'string', required: true },
+    lastupdated: { type: 'string' },
+
+    // 기간 표시(옵션)
+    startDate: { type: 'string' },
+    endDate: { type: 'string' },
+
+    // 카드 표시용
+    thumbnail: { type: 'string' },
+    url: { type: 'string' },
+
+    // 칩
+    stack: { type: 'list', of: { type: 'string' }, default: [] },
+    tags: { type: 'list', of: { type: 'string' }, default: [] },
+
+    status: {
+      type: 'enum',
+      options: ['done', 'in_progress'],
+      default: 'done',
+    },
+  },
+  computedFields: {
+    ...computedFields,
+  },
+}));
+
 export default makeSource({
   contentDirPath: 'src/contents/',
-  documentTypes: [Post, Category, Page],
+  documentTypes: [Post, Category, Page, Work],
   contentDirExclude: ['siteMetadata.ts', 'siteLocaleMetadata.ts', 'components/**/*'],
   mdx: {
     cwd: root,

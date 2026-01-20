@@ -1,0 +1,22 @@
+{
+  "works": "作品",
+  "tableOfContents": "目次",
+  "backToTop": "ページ上部へ",
+  "editPage": "このページを編集",
+  "backToHome": "ホームへ戻る",
+
+  "period": "期間",
+  "postedOn": "公開日",
+  "status": "状態",
+
+  "status_done": "完了",
+  "status_in_progress": "進行中",
+
+  "notTranslated": "このコンテンツはまだ",
+  "version": "版では提供されていません",
+
+  "notfound": "該当する作品はありません",
+  "searchPlaceholder": "作品を検索",
+  "prevPageText": "前へ",
+  "nextPageText": "次へ"
+}

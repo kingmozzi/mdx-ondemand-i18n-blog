@@ -1,0 +1,22 @@
+{
+  "works": "Works",
+  "tableOfContents": "Table of contents",
+  "backToTop": "Back to top",
+  "editPage": "Edit page",
+  "backToHome": "Back to home",
+
+  "period": "Period",
+  "postedOn": "Posted on",
+  "status": "Status",
+
+  "status_done": "Done",
+  "status_in_progress": "In progress",
+  
+  "notTranslated": "Not translated",
+  "version": "version",
+
+  "notfound" : "Not found",
+  "searchPlaceholder": "search",
+  "prevPageText" : "prev",
+  "nextPageText" : "next"
+}
